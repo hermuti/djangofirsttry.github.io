@@ -22,11 +22,10 @@ from pages.views import home,about,contact_us,product
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home_view,name='home'),
-    path('home',home),
-    path('about/',about),
-    path('contact_us/',contact_us),
-    path('product',product),
+    path('',home,name ='home'),
+    path('about/',about ,name='about'),
+    path('contact/',contact, name='contact')
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
     
-]
+
